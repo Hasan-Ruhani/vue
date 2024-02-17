@@ -1,26 +1,19 @@
 <template>
-  <h1>{{first_name}}</h1>
+  <h1>{{message}}</h1>
+  <h3>{{getDate()}}</h3>
 
-  <h3>{{date}}</h3>
-  
-  <button @click="getFullName">click</button>
+  <button @click="date">click</button>
 </template>
 
-<script>
+<script setup>
 
-  const date = new Date()
+  function date(){
+    alert (new Date())
+  }
 
-  export default{
-    data(){
-      return{
-        first_name: "Bill",
-        last_name: "Gates",
-        age: 65,
-        getFullName: ()=>{
-          alert("Bill Gates");
-        }
-      }
-    }
+  const message = "Welcome get ready to master Vue.js 3 with Ostad"
+  function getDate(){
+    return "10th July, 2023"
   }
 </script>
 
