@@ -1,16 +1,13 @@
 <script setup>
 
+  // import {images} from './data/data'   // method 01
+  import images from './data/data'    // method 02
+
   const img = 'https://www.publicdomainpictures.net/pictures/320000/nahled/background-image.png'
   const title = 'The Image is so beautiful'
   const link = 'https://www.publicdomainpictures.net/en/view-image.php?image=316756&picture=background-image'
 
-
-                      // ............array section............
-  const images = [{
-  image: 'https://www.publicdomainpictures.net/pictures/320000/nahled/background-image.png',
-  head_line: 'Thsi flower is so beautiful',
-  address: 'https://www.publicdomainpictures.net/en/view-image.php?image=316756&picture=background-image'
-  }]
+  const number = 17
 
   function date(){
     alert (new Date())
@@ -37,6 +34,7 @@
           Image Source
         </a>
       </div>
+      <h2 class="...">{{ number }} is {{ number % 2 == 0 ? "Even" : "Odd" }}</h2>
     </section>
   </section>
 
