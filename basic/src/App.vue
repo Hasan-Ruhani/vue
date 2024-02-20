@@ -39,7 +39,6 @@
   </section>
 
   <!-- ...................array section...................... -->
-
   <section class="...">
     <h1 class="...">Data Project</h1>
     <section class="...">
@@ -52,7 +51,6 @@
       </div>
     </section>
   </section>
-
   <button @click="date">click</button>
 </template>
 
