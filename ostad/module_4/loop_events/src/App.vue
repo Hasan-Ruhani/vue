@@ -17,7 +17,7 @@
   ];
 
   function getCompleteTask(){
-    return tasks.filter(task => "In Progress" == task.status)
+    return tasks.filter(task => "Complete" == task.status)
   }
 
 </script>
@@ -25,7 +25,12 @@
 <template>
   <section class="mx-auto container flex items-center text-center flex-col space-y-2">
 
-    <div class="p-5 border border-green-600 w-40" v-for="(task, id) in getCompleteTask()" :key="task.id">{{ task.id }}. {{ task.title }}</div>
+    <div class="p-5 border border-green-600" 
+      :class="[task.id === 4 ? 'w-60' : 'w-40']" 
+      v-for="(task, id) in getCompleteTask()" 
+      :key="task.id">
+      {{ task.id }}. {{ task.title }}
+    </div>
     
     <!-- <div class="p-5 border border-green-600 w-40" :key="index"
       v-for="(item, index) in items">{{ index + 1 }}. {{ item }}</div>       -->    <!-- here index is number of column -->
