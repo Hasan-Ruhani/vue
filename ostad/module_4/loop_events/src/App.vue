@@ -19,7 +19,6 @@
   function getCompleteTask(){
     return tasks.filter(task => "Complete" == task.status)
   }
-
 </script>
 
 <template>
