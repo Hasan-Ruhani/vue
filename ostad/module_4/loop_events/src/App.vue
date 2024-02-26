@@ -42,10 +42,8 @@
   //   textColorB.value = textColor
   // }
 
-  // ............................Click Event.....................
-
+  // ............................Click Event...................
   
-
   function getCompleteTask(){
     return tasks.filter(task => "Complete" == task.status)
   }
