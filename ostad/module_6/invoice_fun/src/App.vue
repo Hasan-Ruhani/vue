@@ -154,7 +154,7 @@ function getTotal(){
                             <span>Total</span>
                             <input :value="getTotal()" readonly class="focus:ring-0 focus:ring-offset-0 text-right ml-2 pr-4 w-[200px] border-0" placeholder="Total">
                         </p>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
