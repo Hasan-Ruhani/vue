@@ -130,7 +130,6 @@ function getTotal(){
                 {{ data }}
             </p>
 
-
         </div>
         <div class="mt-[200px]">
             <div class="flex justify-between">
