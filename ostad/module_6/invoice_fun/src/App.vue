@@ -157,7 +157,6 @@ function getTotal(){
                 </div>
             </div>
         </div>
-
     </section>
 </template>
 
