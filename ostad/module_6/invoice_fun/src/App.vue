@@ -125,11 +125,9 @@ function getTotal(){
             <button @click="Object.assign(data,invoice2)" class="ml-2 mt-5 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                 Load Invoice 2
             </button>
-
             <p class="mt-5">
                 {{ data }}
             </p>
-
         </div>
         <div class="mt-[200px]">
             <div class="flex justify-between">
