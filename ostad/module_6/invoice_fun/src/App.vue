@@ -125,6 +125,7 @@ function getTotal(){
             <button @click="Object.assign(data,invoice2)" class="ml-2 mt-5 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                 Load Invoice 2
             </button>
+
             <p class="mt-5">
                 {{ data }}
             </p>
@@ -137,6 +138,7 @@ function getTotal(){
                     <span>Terms</span>
                     <textarea v-model="data.terms" name="" id="" cols="30" rows="2"></textarea>
                 </div>
+
                 <div class="flex flex-col w-1/2 items-end">
                     <div class="mt-10 flex-y-5 text-right space-y-3 w-full">
                         <p>
@@ -147,10 +149,12 @@ function getTotal(){
                             <span>Tax</span>
                             <input v-model="data.tax" type="number" class="tax text-right w-[200px] ml-2">
                         </p>
+
                         <p>
                             <span>Total</span>
                             <input :value="getTotal()" readonly class="focus:ring-0 focus:ring-offset-0 text-right ml-2 pr-4 w-[200px] border-0" placeholder="Total">
                         </p>
+                        
                     </div> 
                 </div>
             </div>
