@@ -4,7 +4,6 @@
     const props = defineProps([
         'modelValue'
     ]);
-
     const nameParts = props.modelValue.split(' ');
     const fname = ref(nameParts[0]);
     const lname = ref(nameParts[1]);
