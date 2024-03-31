@@ -2,7 +2,6 @@
     const props = defineProps([
         'label', 'modelValue'
     ]);
-
     const emit = defineEmits(['update:modelValue']);
 </script>
 

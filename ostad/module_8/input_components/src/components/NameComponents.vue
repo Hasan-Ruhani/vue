@@ -2,7 +2,6 @@
     const props = defineProps([
         'fname', 'lname'
     ]);
-
     const emit = defineEmits(['update:fname', 'update:lname']);
 </script>
 
