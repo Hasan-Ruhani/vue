@@ -11,11 +11,10 @@
             <Sidebar/>
           </aside>
           <main class="w-full min-h-screen p-5">
-
             <!-- <RouterView/>  -->            <!-- same <RouterView/> & <router-iew></router-iew> almost same -->
             <router-view></router-view>
-
           </main>
+          <router-view name="right"></router-view>     <!-- for load only right sidebar -->
         </section>
 </template>
 
