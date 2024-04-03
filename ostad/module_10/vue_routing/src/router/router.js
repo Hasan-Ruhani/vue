@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from 'vue-router';
 import Home from '../components/Home.vue'
 import About from '../components/About.vue'
 import Contact from '../components/Contact.vue'
+import Blogs from '../components/Blogs.vue'
 import Blog from '../components/Blog.vue'
 import RightSidebar from '../components/RightSidebar.vue'
 
@@ -23,20 +24,25 @@ const routes = [
         // name: 'contact'
     },
     {
-        path: '/blog',
+        path: '/blogs',
         components:{
-            default: Blog,
+            default: Blogs,
             right: RightSidebar
         },
         // name: 'blog'
     },
     {
-        path: '/blog/tag/:tag',     // :tag use for pass dynamic url
+        path: '/blogs/tag/:tag',     // :tag use for pass dynamic url
         components:{
-            default: Blog,
+            default: Blogs,
             right: RightSidebar
         },
         name: 'category'
+    },
+    {
+        path: '/blogs/:id',     // :tag use for pass dynamic url
+        component: Blog,
+        name: 'blog'
     }
 ];
 

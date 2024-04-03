@@ -18,7 +18,7 @@
         <RouterLink to="/contact">Contact</RouterLink>
     </li>
     <li>
-        <RouterLink to="/blog">Blog</RouterLink>
+        <RouterLink to="/blogs">Blogs</RouterLink>
     </li>
     </ul>
 </section>
