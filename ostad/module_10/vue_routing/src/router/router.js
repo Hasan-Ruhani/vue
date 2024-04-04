@@ -40,10 +40,13 @@ const routes = [
         name: 'category'
     },
     {
-        path: '/blogs/:id',     // :tag use for pass dynamic url
-        component: Blog,
+        path: '/blogs/:id',   
+        components: {
+            default: Blog,
+            right: RightSidebar
+        },
         name: 'blog'
-    }
+    },
 ];
 
 const router = createRouter({
