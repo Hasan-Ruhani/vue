@@ -1,6 +1,8 @@
 <script setup>
     import {ref, reactive, onBeforeMount, watch, computed} from 'vue';
     import {useRoute} from 'vue-router';    // its import for tag dynamic
+    import axios from 'axios';
+    const posts = ref([]);   
     const route = useRoute();
 
     // function getSlug(title){
@@ -15,8 +17,14 @@
     //     return route.params.tag;
     // });
 
-    const posts = ref([]);                        // call an API for viewing dummy data
-    onBeforeMount(() => {
+    //...................................................if you use axios call for get api dummy data   
+    // axios.get('https://dummyjson.com/posts/')
+    // .then(res => {
+    //     posts.value = res.data.posts
+    // });
+
+    //.............................if you use fetch call for get api dummy data                     
+    onBeforeMount(() => {                 // call an API for viewing dummy data
         fetch('https://dummyjson.com/posts/')
         .then(res => res.json())
         .then(data => {

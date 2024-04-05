@@ -41,10 +41,7 @@ const routes = [
     },
     {
         path: '/blogs/:id',   
-        components: {
-            default: Blog,
-            right: RightSidebar
-        },
+        component: Blog,
         name: 'blog'
     },
 ];
