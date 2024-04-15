@@ -4,6 +4,7 @@
 </script>
 
 <template>
+
   <header class="bg-black border-b-light-100 border-b h-20 text-white items-center flex p-5 text-2xl">A Wonderful Blog</header>
         <section class="flex">
           <aside class="w-[450px] bg-black ">
@@ -15,6 +16,7 @@
           </main>
           <router-view name="right"></router-view>     <!-- for load only right sidebar -->
         </section>
+        
 </template>
 
 <style scoped>

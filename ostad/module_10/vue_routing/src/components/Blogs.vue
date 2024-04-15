@@ -41,6 +41,7 @@
     </div>
 
     <article v-for="post in posts" :key="post.id" class="mb-10">
+        
         <h1 class="text-xl mb-2">
             <router-link :to="{name: 'blog', params:{id: post.id}}">{{ post.title }}</router-link>
             <!-- <router-link :to="{name: 'blog', params:{id: getSlug(post.title)}}">{{ post.title }}</router-link> -->   <!-- if you slug -->
@@ -51,6 +52,7 @@
             </router-link>
             {{ post.body }}
         </p>
+
     </article>
     
 </template>
