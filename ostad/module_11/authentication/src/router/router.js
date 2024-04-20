@@ -7,6 +7,8 @@ import Blogs from '../components/Blogs.vue'
 import Blog from '../components/Blog.vue'
 import RightSidebar from '../components/RightSidebar.vue'
 import Protected from '../components/Protected.vue'
+import Login from '../components/login.vue'
+import { authStore } from '../store/store';
 
 const routes = [
     {
@@ -30,6 +32,9 @@ const routes = [
             default: Blogs,
             right: RightSidebar
         },
+        meta:{
+            requiresAuth: true
+        }
         // name: 'blog'
     },
     {
@@ -48,13 +53,30 @@ const routes = [
     {
         path: '/protected',
         component: Protected,
-        name: 'protected'
+        name: 'protected',
+        meta:{
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/login',
+        component: Login,
+        name: 'login'
     }
 ];
 
 const router = createRouter({
     history: createWebHistory(),
     routes: routes
+});
+
+router.beforeEach((to, from, next) => {
+    if(to.meta.requiresAuth && !authStore.isAuthenticated){
+        next('/login');
+    }
+    else{
+        next();
+    }
 });
 
 export default router

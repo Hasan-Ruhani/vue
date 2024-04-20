@@ -23,6 +23,9 @@
     <li>
         <RouterLink :to="{name: 'protected'}">Protected</RouterLink>
     </li>
+    <li>
+        <RouterLink :to="{name: 'login'}">Login</RouterLink>
+    </li>
     </ul>
 </section>
     
