@@ -1,5 +1,6 @@
 <script setup>
-
+    import {authStore} from '../store/store'
+    const auth = authStore;
 </script>
 
 <template>
@@ -23,8 +24,17 @@
     <li>
         <RouterLink :to="{name: 'protected'}">Protected</RouterLink>
     </li>
-    <li>
+    <li v-if="auth.user?.role == 'admin'">
+        <RouterLink :to="{name: 'admin'}">Admin</RouterLink>
+    </li>
+    <li v-if="auth.user?.role == 'editor' || auth.user?.role == 'admin'">
+        <RouterLink :to="{name: 'editor'}">Editor</RouterLink>
+    </li>
+    <li v-if="!auth.isAuthenticated">
         <RouterLink :to="{name: 'login'}">Login</RouterLink>
+    </li>
+    <li v-if="auth.isAuthenticated">
+        <RouterLink @click="auth.logout()" :to="{name: 'logout'}">Logout</RouterLink>
     </li>
     </ul>
 </section>

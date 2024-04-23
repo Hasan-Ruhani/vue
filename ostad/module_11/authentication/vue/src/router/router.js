@@ -2,6 +2,8 @@ import {createRouter, createWebHistory} from 'vue-router';
 
 import Home from '../components/Home.vue'
 import About from '../components/About.vue'
+import Admin from '../components/Admin.vue'
+import Editor from '../components/Editor.vue'
 import Contact from '../components/Contact.vue'
 import Blogs from '../components/Blogs.vue'
 import Blog from '../components/Blog.vue'
@@ -20,6 +22,22 @@ const routes = [
         path: '/about',
         component: About,
         name: 'about'
+    },
+    {
+        path: '/admin',
+        component: Admin,
+        name: 'admin',
+        meta:{
+            requiresAuth: true,
+        }
+    },
+    {
+        path: '/editor',
+        component: Editor,
+        name: 'editor',
+        meta:{
+            requiresAuth: true,
+        }
     },
     {
         path: '/contact',
@@ -62,6 +80,11 @@ const routes = [
         path: '/login',
         component: Login,
         name: 'login'
+    },
+    {
+        path: '/logout',
+        // component: Login,
+        name: 'logout'
     }
 ];
 

@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 class loginController extends Controller
 {
+
+    public function data(){
+        return response() -> json([
+            'user' => [
+                'id' => 1,
+                'name' => 'Admin',
+                'role' => 'admin'
+            ]
+            ]);
+    }
     public function login(Request $request){
         $username = $request -> input('username');
         $password = $request -> input('password');

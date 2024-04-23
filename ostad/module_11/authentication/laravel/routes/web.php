@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::post('/login', [loginController::class, 'login']);
+Route::get('/data', [loginController::class, 'data']);
