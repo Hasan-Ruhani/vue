@@ -18,11 +18,13 @@ const routes = [
         component: Home,
         name: 'home'
     },
+    
     {
         path: '/about',
         component: About,
         name: 'about'
     },
+
     {
         path: '/admin',
         component: Admin,
@@ -31,6 +33,7 @@ const routes = [
             requiresAuth: true,
         }
     },
+
     {
         path: '/editor',
         component: Editor,
@@ -39,11 +42,13 @@ const routes = [
             requiresAuth: true,
         }
     },
+
     {
         path: '/contact',
         component: Contact,
         // name: 'contact'
     },
+
     {
         path: '/blogs',
         components:{
@@ -55,6 +60,7 @@ const routes = [
         }
         // name: 'blog'
     },
+
     {
         path: '/blogs/tag/:tag',     // :tag use for pass dynamic url
         components:{
@@ -63,11 +69,13 @@ const routes = [
         },
         name: 'category'
     },
+
     {
         path: '/blogs/:id',   
         component: Blog,
         name: 'blog'
     },
+
     {
         path: '/protected',
         component: Protected,
@@ -76,11 +84,13 @@ const routes = [
             requiresAuth: true
         }
     },
+
     {
         path: '/login',
         component: Login,
         name: 'login'
     },
+    
     {
         path: '/logout',
         // component: Login,
