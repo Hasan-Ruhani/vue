@@ -22,5 +22,4 @@ const options = {
   maintainAspectRatio: false,
   height:300
 }
-
 </script>
