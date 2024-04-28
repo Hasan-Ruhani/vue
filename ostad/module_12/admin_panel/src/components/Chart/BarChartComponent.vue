@@ -14,7 +14,6 @@ const data = {
 }
 
 // JSON Array Kata-Kati--->
-
 const options = {
   responsive: true,
   height:300,
