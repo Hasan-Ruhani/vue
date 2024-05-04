@@ -25,6 +25,7 @@ class UsersSeeder extends Seeder {
             'password' => Hash::make('hydra'),
             'name' => 'Hydra Admin',
         ]);
+        
         $user->roles()->attach(Role::where('slug', 'admin')->first());
     }
 }
