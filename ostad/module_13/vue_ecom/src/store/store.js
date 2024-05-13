@@ -9,14 +9,14 @@ const authStore = reactive ({
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({email: username, password})
+            body: JSON.stringify({email:username, password})
         }).then(res => res.json())
         .then(res => {
-            if(res.error){
+            if(res.error == 0){
                 authStore.isAuthenticated = true;
-                authStore.user = res.user;
+                authStore.user = res;
                 localStorage.setItem('auth', 1);
-                localStorage.setItem('user', JSON.stringify(res.user));
+                localStorage.setItem('user', JSON.stringify(res));
                 router.push('/');
             }
             else{
