@@ -11,6 +11,7 @@
     const updateName = () => {
         emit('update:modelValue', `${fname.value} ${lname.value}`);
     }
+    
 </script>
 
 <template>
