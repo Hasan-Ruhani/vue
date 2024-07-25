@@ -3,6 +3,7 @@
 </script>
 
 <template>
+  
   <article class="text-left mb-10">
         <h1 class="text-xl mb-2">Hello World Post</h1>
         <p>
