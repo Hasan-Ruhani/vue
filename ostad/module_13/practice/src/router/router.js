@@ -3,24 +3,38 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from '../components/Home.vue'
 import About from '../components/About.vue'
 import Contact from '../components/Contact.vue'
-import Blog from '../components/Blog.vue'
+import Post from '../components/post.vue'
+import Posts from '../components/posts.vue'
+import Sidebar from '../components/Sidebar.vue'
 
 const routes = [
     {
         path: '/',
-        component: Home
+        components: {
+            default: Home,
+            LeftSideBar: Sidebar
+        }
     },
     {
         path: '/about',
-        component: About
+        components: {
+            default: About,
+            LeftSideBar: Sidebar
+        }
     },
     {
         path: '/contact',
-        component: Contact
+        components: {
+            default: Contact,
+            LeftSideBar: Sidebar
+        }
     },
     {
-        path: '/blog',
-        component: Blog
+        path: '/posts',
+        components: {
+            default: Post,
+            LeftSideBar: Sidebar
+        }
     },
 ]
 

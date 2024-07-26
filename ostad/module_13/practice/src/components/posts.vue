@@ -4,7 +4,7 @@
 
 <template>
   <article class="text-left mb-10">
-        <h1 class="text-xl mb-2">This Blog Page</h1>
+        <h1 class="text-xl mb-2">This Posts Page</h1>
         <p>
         <img src="https://source.unsplash.com/random/300x200?2" alt="">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, esse id. Dolorum delectus quas eos dolores amet cupiditate sed fugiat, facere quisquam deserunt suscipit culpa animi neque, modi inventore officiis omnis nam.
