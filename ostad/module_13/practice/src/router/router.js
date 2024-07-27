@@ -32,10 +32,18 @@ const routes = [
     {
         path: '/posts',
         components: {
-            default: Post,
+            default: Posts,
             LeftSideBar: Sidebar
         }
     },
+    {
+        path: '/posts/:id',
+        components: {
+            default: Post,
+            LeftSideBar: Sidebar
+        },
+        name: 'post',
+    }
 ]
 
 
