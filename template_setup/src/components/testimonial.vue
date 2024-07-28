@@ -16,7 +16,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
                         </p>
                         <div class="d-flex justify-content-center mb-4">
-                            <img src="img/testimonial-1.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                            <img src="../assets/img/testimonial-1.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
                         </div>
                         <div class="d-block">
                             <h4 class="text-dark">Client Name</h4>
@@ -34,7 +34,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
                         </p>
                         <div class="d-flex justify-content-center mb-4">
-                            <img src="img/testimonial-2.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                            <img src="../assets/img/testimonial-2.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
                         </div>
                         <div class="d-block">
                             <h4 class="text-dark">Client Name</h4>
@@ -52,7 +52,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
                         </p>
                         <div class="d-flex justify-content-center mb-4">
-                            <img src="img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                            <img src="../assets/img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
                         </div>
                         <div class="d-block">
                             <h4 class="text-dark">Client Name</h4>
@@ -70,7 +70,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
                         </p>
                         <div class="d-flex justify-content-center mb-4">
-                            <img src="img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                            <img src="../assets/img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
                         </div>
                         <div class="d-block">
                             <h4 class="text-dark">Client Name</h4>

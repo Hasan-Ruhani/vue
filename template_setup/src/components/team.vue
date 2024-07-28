@@ -15,7 +15,7 @@
                         <div class="team-item p-4">
                             <div class="team-inner rounded">
                                 <div class="team-img">
-                                    <img src="img/team-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                    <img src="../assets/img/team-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
                                     <div class="team-share">
                                         <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
                                     </div>
@@ -37,7 +37,7 @@
                         <div class="team-item p-4">
                             <div class="team-inner rounded">
                                 <div class="team-img">
-                                    <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                    <img src="../assets/img/team-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
                                     <div class="team-share">
                                         <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
                                     </div>
@@ -59,7 +59,7 @@
                         <div class="team-item p-4">
                             <div class="team-inner rounded">
                                 <div class="team-img">
-                                    <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                    <img src="../assets/img/team-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
                                     <div class="team-share">
                                         <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
                                     </div>
@@ -81,7 +81,7 @@
                         <div class="team-item p-4">
                             <div class="team-inner rounded">
                                 <div class="team-img">
-                                    <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                    <img src="../assets/img/team-4.jpg" class="img-fluid rounded-top w-100" alt="Image">
                                     <div class="team-share">
                                         <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
                                     </div>
