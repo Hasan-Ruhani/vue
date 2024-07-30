@@ -1,5 +1,6 @@
 <script setup>
-
+    import { authStore } from '../store/store';
+    const auth = authStore;
 </script>
 
 <template>
@@ -20,14 +21,22 @@
         </li>
 
         <li>
-            <router-link to="/posts">Posts</router-link>
+            <router-link to="/products">Products</router-link>
         </li>
 
         <li>
             <router-link :to="{ name: 'protected' }">Protected</router-link>
         </li>
+        
+        <li v-if="auth.user?.role == 'admin'">               <!--  '?' use for if role property have in user so return value or not have so return null.  -->
+            <router-link to="/admin">Admin</router-link>
+        </li>
 
-        <li>
+        <li v-if="auth.user?.role == 'editor' || auth.user?.role == 'admin'">               <!--  '?' use for if role property have in user so return value or not have so return null.  -->
+            <router-link to="/editor">Editor</router-link>
+        </li>
+
+        <li v-if="!auth.isAuthenticated">
             <router-link to="/login">Login</router-link>
         </li>
 

@@ -3,11 +3,13 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from '../components/Home.vue';
 import About from '../components/About.vue';
 import Contact from '../components/Contact.vue';
-import Post from '../components/post.vue';
-import Posts from '../components/posts.vue';
+import Product from '../components/Product.vue';
+import Products from '../components/Products.vue';
 import Sidebar from '../components/Sidebar.vue';
 import Protected from '../components/Protected.vue';
-import Login from '../components/login.vue';
+import Admin from '../components/Admin.vue';
+import Editor from '../components/Editor.vue';
+import Login from '../components/Login.vue';
 
 import { authStore } from "../store/store";
 
@@ -27,6 +29,26 @@ const routes = [
         }
     },
     {
+        path: '/admin',
+        components: {
+            default: Admin,
+            LeftSideBar: Sidebar
+        },
+        meta:{                              
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/editor',
+        components: {
+            default: Editor,
+            LeftSideBar: Sidebar
+        },
+        meta:{                              
+            requiresAuth: true
+        }
+    },
+    {
         path: '/login',
         components: {
             default: Login,
@@ -41,22 +63,22 @@ const routes = [
         }
     },
     {
-        path: '/posts',
+        path: '/products',
         components: {
-            default: Posts,
+            default: Products,
             LeftSideBar: Sidebar
         },
-        meta:{                                 // protected by token (token = 123)
+        meta:{                                 
             requiresAuth: true
         }
     },
     {
-        path: '/posts/:id',
+        path: '/products/:id',
         components: {
-            default: Post,
+            default: Product,
             LeftSideBar: Sidebar
         },
-        name: 'post',
+        name: 'product',
     },
     {
         path: '/protected',
@@ -65,7 +87,7 @@ const routes = [
             LeftSideBar: Sidebar
         },
         name: 'protected',
-        meta:{                               // protected by token (token = 123)
+        meta:{                               
             requiresAuth: true
         }
     }

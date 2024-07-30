@@ -1,107 +1,106 @@
-import {createRouter, createWebHistory} from 'vue-router';
+import { createRouter, createWebHistory } from "vue-router";
 
-import Home from '../components/Home.vue'
-import About from '../components/About.vue'
-import Admin from '../components/Admin.vue'
-import Editor from '../components/Editor.vue'
-import Contact from '../components/Contact.vue'
-import Blogs from '../components/Blogs.vue'
-import Blog from '../components/Blog.vue'
-import RightSidebar from '../components/RightSidebar.vue'
-import Protected from '../components/Protected.vue'
-import Login from '../components/login.vue'
-import { authStore } from '../store/store';
+import Home from '../components/Home.vue';
+import About from '../components/About.vue';
+import Contact from '../components/Contact.vue';
+import Post from '../components/Post.vue';
+import Posts from '../components/Posts.vue';
+import Sidebar from '../components/Sidebar.vue';
+import Protected from '../components/Protected.vue';
+import Admin from '../components/Admin.vue';
+import Editor from '../components/Editor.vue';
+import Login from '../components/Login.vue';
+
+import { authStore } from "../store/store";
 
 const routes = [
     {
         path: '/',
-        component: Home,
-        name: 'home'
+        components: {
+            default: Home,
+            LeftSideBar: Sidebar
+        }
     },
-    
     {
         path: '/about',
-        component: About,
-        name: 'about'
+        components: {
+            default: About,
+            LeftSideBar: Sidebar
+        }
     },
-
     {
         path: '/admin',
-        component: Admin,
-        name: 'admin',
-        meta:{
-            requiresAuth: true,
+        components: {
+            default: Admin,
+            LeftSideBar: Sidebar
+        },
+        meta:{                              
+            requiresAuth: true
         }
     },
-
     {
         path: '/editor',
-        component: Editor,
-        name: 'editor',
-        meta:{
-            requiresAuth: true,
-        }
-    },
-
-    {
-        path: '/contact',
-        component: Contact,
-        // name: 'contact'
-    },
-
-    {
-        path: '/blogs',
-        components:{
-            default: Blogs,
-            right: RightSidebar
+        components: {
+            default: Editor,
+            LeftSideBar: Sidebar
         },
-        meta:{
-            requiresAuth: true
-        }
-        // name: 'blog'
-    },
-
-    {
-        path: '/blogs/tag/:tag',     // :tag use for pass dynamic url
-        components:{
-            default: Blogs,
-            right: RightSidebar
-        },
-        name: 'category'
-    },
-
-    {
-        path: '/blogs/:id',   
-        component: Blog,
-        name: 'blog'
-    },
-
-    {
-        path: '/protected',
-        component: Protected,
-        name: 'protected',
-        meta:{
+        meta:{                              
             requiresAuth: true
         }
     },
-
     {
         path: '/login',
-        component: Login,
-        name: 'login'
+        components: {
+            default: Login,
+            LeftSideBar: Sidebar
+        }
     },
-    
     {
-        path: '/logout',
-        // component: Login,
-        name: 'logout'
+        path: '/contact',
+        components: {
+            default: Contact,
+            LeftSideBar: Sidebar
+        }
+    },
+    {
+        path: '/posts',
+        components: {
+            default: Posts,
+            LeftSideBar: Sidebar
+        },
+        meta:{                                 
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/posts/:id',
+        components: {
+            default: Post,
+            LeftSideBar: Sidebar
+        },
+        name: 'post',
+    },
+    {
+        path: '/protected',
+        components: {
+            default: Protected,
+            LeftSideBar: Sidebar
+        },
+        name: 'protected',
+        meta:{                               
+            requiresAuth: true
+        }
     }
-];
+]
+
+// const isAuthenticated = () => {
+//     return localStorage.getItem('token') == '123';
+// }
 
 const router = createRouter({
     history: createWebHistory(),
     routes: routes
-});
+})
 
 router.beforeEach((to, from, next) => {
     if(to.meta.requiresAuth && !authStore.isAuthenticated){
@@ -112,5 +111,4 @@ router.beforeEach((to, from, next) => {
     }
 });
 
-export default router
-
+export default router;
