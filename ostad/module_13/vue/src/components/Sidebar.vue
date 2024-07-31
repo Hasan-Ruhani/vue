@@ -1,5 +1,6 @@
 <script setup>
     import { authStore } from '../store/store';
+    import { cart } from '../store/cart';
     const auth = authStore;
 </script>
 
@@ -22,6 +23,10 @@
 
         <li>
             <router-link to="/products">Products</router-link>
+        </li>
+
+        <li>
+            <router-link to="/cart">Cart ( {{ cart.totalCartItems }} )</router-link>
         </li>
 
         <li>
