@@ -1,20 +1,17 @@
 <script setup>
   import axios from 'axios';
   import { cart } from '../store/cart';
-  import { wishlist } from '../store/wishlist';
+  import  { wishlist }  from '../store/wishlist';
+  import WishListIcon from './WishListIcon.vue'
   import { ref, reactive, onBeforeMount } from "vue";
   const products = ref([]);
   onBeforeMount(()=>{
-    // fetch('https://fakestoreapi.com/products')          // use fetch call
-    // .then(res=>res.json())
-    // .then(data=>{
-    //   products.value = data;
-    // })
-
     axios.get('http://localhost:8000/api/products')         // use axios call
     .then(res => {
       products.value = res.data;
     });
+
+    wishlist.fetchWishList();
   });
 
 </script>
@@ -42,11 +39,12 @@
             </div>
             <p class="text-sm font-medium text-gray-200">${{ product.price }}</p>
           </div>
-          <div class="flex justify-between">
+          <div class="flex justify-between items-center">
             <button @click="cart.addItem(product)" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
               Add to Cart
             </button>
-            <img class="w-8 cursor-center" src="//img.icons8.com/?size=100&id=rntHZLVPcFtp&format=png&color=FFFFFF" alt="">
+            <!-- <img @click="wishlist.toggleWishList(product)" class="w-8 cursor-center" :src="wishlist.getIcon(product)" alt=""> -->
+             <WishListIcon :product="product"/>
           </div>
         </div>
       </div>
