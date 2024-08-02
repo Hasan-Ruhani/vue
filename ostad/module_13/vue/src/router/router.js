@@ -68,9 +68,6 @@ const routes = [
         components: {
             default: Products,
             LeftSideBar: Sidebar
-        },
-        meta:{                                 
-            requiresAuth: true
         }
     },
     {

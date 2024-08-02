@@ -72,7 +72,7 @@ const wishlist = reactive({
         }else{
             return '//img.icons8.com/?size=100&id=rntHZLVPcFtp&format=png&color=FFFFFF';
         }
-    }
+    },
 });
 // export default wishlist
 export {wishlist}

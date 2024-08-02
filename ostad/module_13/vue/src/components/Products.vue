@@ -1,5 +1,6 @@
 <script setup>
   import axios from 'axios';
+  import { authStore } from '../store/store';
   import { cart } from '../store/cart';
   import  { wishlist }  from '../store/wishlist';
   import WishListIcon from './WishListIcon.vue'
@@ -44,7 +45,7 @@
               Add to Cart
             </button>
             <!-- <img @click="wishlist.toggleWishList(product)" class="w-8 cursor-center" :src="wishlist.getIcon(product)" alt=""> -->
-             <WishListIcon :product="product"/>
+             <WishListIcon v-if="authStore.isAuthenticated" :product="product"/>
           </div>
         </div>
       </div>
