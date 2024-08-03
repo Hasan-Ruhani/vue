@@ -6,7 +6,7 @@ const PublicGard = () => {
     const { profile } = useSelector(state => state.admin);
 
     if(localStorage.getItem("profile")){
-        return profile ? <Navigate to={"/dashboard"}/> : <Outlet/>;
+        return profile ? <Navigate to={"/"}/> : <Outlet/>;
     }
     return <Outlet />;
 

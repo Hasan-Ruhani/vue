@@ -10,6 +10,11 @@ const wishlist = reactive({
     async fetchWishList(){
         const apiUrl = 'http://localhost:8000/api/wishlist/';
         const token = authStore.getUserToken();
+
+        if(!token){
+            return;
+        }
+
         try{
             const response = await fetch(apiUrl,{
                 method: 'GET',
@@ -73,6 +78,10 @@ const wishlist = reactive({
             return '//img.icons8.com/?size=100&id=rntHZLVPcFtp&format=png&color=FFFFFF';
         }
     },
+
+    clearItems(){
+        return this.items = [];
+    }
 });
 // export default wishlist
 export {wishlist}

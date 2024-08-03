@@ -10,7 +10,7 @@ const PublicRouter = [
         children: [
 
             {
-                path: "/dashboard/login",
+                path: "login",
                 element: <Login/>
             }
             

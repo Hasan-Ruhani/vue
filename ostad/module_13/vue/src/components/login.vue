@@ -4,8 +4,8 @@
   import router from '../router/router';
 
   const auth = authStore;
-  const username = ref('');
-  const password = ref('');
+  const username = ref('jane@doe.com');
+  const password = ref('12345');
 
 </script>
 

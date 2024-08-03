@@ -5,7 +5,7 @@ const PrivateGard = () => {
 
     const { profile } = useSelector((state) => state.admin);
 
-    return profile ? <Outlet /> : <Navigate to={"dashboard/login"}/>
+    return profile ? <Outlet /> : <Navigate to={"login"}/>
     
 }
 

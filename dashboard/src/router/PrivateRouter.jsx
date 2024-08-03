@@ -17,7 +17,7 @@ const PrivateRouter = [
                 children: [
 
                     {
-                        path: "/dashboard",
+                        path: "/",
                         element: <Dashboard />
                     },
 
