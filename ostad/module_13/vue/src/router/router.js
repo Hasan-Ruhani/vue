@@ -10,6 +10,7 @@ import Protected from '../components/Protected.vue';
 import Admin from '../components/Admin.vue';
 import Editor from '../components/Editor.vue';
 import Cart from '../components/Cart.vue';
+import Orders from '../components/Orders.vue';
 import Login from '../components/Login.vue';
 
 import { authStore } from "../store/store";
@@ -82,6 +83,13 @@ const routes = [
         path: '/cart',
         components: {
             default: Cart,
+            LeftSideBar: Sidebar
+        }
+    },
+    {
+        path: '/orders',
+        components: {
+            default: Orders,
             LeftSideBar: Sidebar
         }
     },

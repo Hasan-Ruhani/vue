@@ -29,6 +29,10 @@
             <router-link to="/cart">Cart ( {{ cart.totalCartItems }} )</router-link>
         </li>
 
+        <li v-if="auth.isAuthenticated">
+            <router-link to="/orders">Orders</router-link>
+        </li>
+
         <li>
             <router-link :to="{ name: 'protected' }">Protected</router-link>
         </li>

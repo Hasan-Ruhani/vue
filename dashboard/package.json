@@ -1,8 +1,8 @@
 {
-  "name": "frontend-dashboard",
+  "name": "dashboard",
   "private": true,
   "homepage": "/",
-  "version": "2.1.0",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
