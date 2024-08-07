@@ -36,6 +36,12 @@ import { cart } from '../store/cart'
                         <strong>{{ cart.totalPrice }}</strong>
                     </p>
                 </div>
+                <div class="my-5">
+                    <input type="text" placeholder="apply coupon code">
+                    <button class="ml-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Apply Coupon
+                    </button>
+                </div>
                 <button @click="cart.saveCartInLocalStorage()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Update Cart
                 </button>
