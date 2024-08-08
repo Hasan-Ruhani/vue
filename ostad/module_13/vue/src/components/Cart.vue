@@ -33,15 +33,27 @@ import { cart } from '../store/cart'
 
                     </p>
                     <p>
+                        <span v-if="cart.discountApplied" class="mr-5">
+                            <del>{{ cart.originalPrice }}</del>
+                        </span>
                         <strong>{{ cart.totalPrice }}</strong>
+                        <span v-if="cart.discountApplied"> ({{ cart.discountInPercentage }}%) Discount </span>
                     </p>
                 </div>
-                <div class="my-5">
-                    <input type="text" placeholder="apply coupon code">
-                    <button class="ml-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                
+                <div v-if="!cart.discountApplied" class="my-5 text-black">
+                    <input v-model="cart.couponCode" type="text" placeholder="apply coupon code">
+                    <button @click="cart.applyCoupon()" class="ml-5 bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded">
                         Apply Coupon
                     </button>
                 </div>
+
+                <div v-if="cart.discountApplied" class="my-5 text-black">
+                    <button @click="cart.removeCoupon()" class="bg-gray-500 hover:bg-gray-700 font-bold py-2 px-4 rounded">
+                        Remove Coupon
+                    </button>
+                </div>
+
                 <button @click="cart.saveCartInLocalStorage()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Update Cart
                 </button>
